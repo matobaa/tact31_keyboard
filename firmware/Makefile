@@ -1,6 +1,9 @@
 .PHONY: clean qmk
 
-all: qmk_firmware/tact31_default.hex
+all: tact31_default.hex
+
+tact31_default.hex: qmk_firmware/tact31_default.hex
+	cp $< $@
 
 qmk_firmware/tact31_default.hex: qmk_firmware/keyboards/tact31
 	cd qmk_firmware; make tact31:default
@@ -11,6 +14,7 @@ qmk_firmware/keyboards/tact31: keyboards/tact31
 clean:
 	rm -rf qmk_firmware/keyboards/tact31
 	rm -f qmk_firmware/tact31_default.hex
+	rm -f tact31_default.hex
 
 qmk:
 	which avr-gcc || qmk_firmware/util/qmk_install.sh
