@@ -40,7 +40,7 @@ Tact31 Keyboard は、タクトスイッチを用いた30%キーボードです�
 
 - [（初心者編）自作キーボードにファームウェアを書き込む](https://salicylic-acid3.hatenablog.com/entry/qmk-toolbox)
 
-<img src="pad.png" align=right>
+<img src="pad.PNG" align=right>
 
 ### ダイオードのはんだ付け
 
